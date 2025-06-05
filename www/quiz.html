@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz: Che ricetta sei?</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+  function calcolaRisultato() {
+    // Verifica che tutte le domande abbiano una risposta
+    const q1 = document.querySelector('input[name="q1"]:checked');
+    const q2 = document.querySelector('input[name="q2"]:checked');
+    const q3 = document.querySelector('input[name="q3"]:checked');
+
+    let risultato = "";
+
+    if (!q1 || !q2 || !q3) {
+      risultato = "Completa il quiz se vuoi scoprire che ricetta sei!";
+    } else {
+      let punteggio = 0;
+
+      if (document.getElementById('q1a').checked) punteggio += 3;
+      if (document.getElementById('q1b').checked) punteggio += 2;
+      if (document.getElementById('q1c').checked) punteggio += 1;
+
+      if (document.getElementById('q2a').checked) punteggio += 3;
+      if (document.getElementById('q2b').checked) punteggio += 2;
+      if (document.getElementById('q2c').checked) punteggio += 1;
+
+      if (document.getElementById('q3a').checked) punteggio += 3;
+      if (document.getElementById('q3b').checked) punteggio += 2;
+      if (document.getElementById('q3c').checked) punteggio += 1;
+
+      if (punteggio >= 5) {
+        risultato = "🎉 Sei una persona creativa e golosa! Le ricette fantasiose e gustose sono il tuo forte.";
+      } else if (punteggio > 3) {
+        risultato = "😋 Sei pratico e affamato! Ti piacciono le ricette facili ma sempre soddisfacenti.";
+      } else if (punteggio === 3) {
+        risultato = "🍽️ Sei uno che va dritto al punto: semplicità prima di tutto!";
+      }
+    }
+
+    document.getElementById('result').textContent = risultato;
+  }
+</script>
+
+</head>
+<body>
+  <header>
+    <h1>🎉 Quiz: Che ricetta sei?</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="btn">Home</a></li>
+        <li><a href="salati.html" class="btn">Snack Salati</a></li>
+        <li><a href="dolci.html" class="btn">Dolci da leccarsi i baffi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form id="quizForm">
+      <fieldset>
+        <legend>1. Cosa mangeresti subito?</legend>
+        <label><input type="radio" name="q1" id="q1a" /> Toast prosciutto e formaggio</label><br/>
+        <label><input type="radio" name="q1" id="q1b" /> Patatine con ketchup</label><br/>
+        <label><input type="radio" name="q1" id="q1c" /> Olive e formaggio a pezzi</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Dolce preferito?</legend>
+        <label><input type="radio" name="q2" id="q2a" /> Banana con cioccolato</label><br/>
+        <label><input type="radio" name="q2" id="q2b" /> Biscotti del supermercato</label><br/>
+        <label><input type="radio" name="q2" id="q2c" /> Gelato al limone</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. A mezzanotte ti svegli con fame...?</legend>
+        <label><input type="radio" name="q3" id="q3a" /> Vado subito a cercare un dolce!</label><br/>
+        <label><input type="radio" name="q3" id="q3b" /> Uno snack salato veloce</label><br/>
+        <label><input type="radio" name="q3" id="q3c" /> Mangio quello che trovo</label>
+      </fieldset>
+
+      <button type="submit" class="btn">Scopri il risultato!</button>
+    </form>
+
+    <p id="result" class="result"></p>
+  </main>
+
+  <script>
+    document.getElementById('quizForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      calcolaRisultato();
+    });
+  </script>
+
+  <footer>
+    <p>© 2025 Ricette Super Facili e Divertenti - Creato da Pola Lucia</p>
+  </footer>
+</body>
+</html>
