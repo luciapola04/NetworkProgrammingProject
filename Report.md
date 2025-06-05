@@ -2,7 +2,12 @@
 
 ## 1. Obiettivo
 
-L'obiettivo del progetto è stato realizzare un semplice server HTTP minimale utilizzando Python e il modulo `socket`, in grado di servire un sito web statico composto da più pagine HTML e un foglio di stile CSS. Il server deve rispondere a richieste GET su `localhost` alla porta `8080`, gestire correttamente i file richiesti e restituire codici di stato HTTP adeguati.
+L'obiettivo del progetto è quello di realizzare un semplice server HTTP minimale utilizzando Python e il modulo `socket`, in grado di servire un sito web statico HTML/CSS.
+Il server deve:
+-rispondere su `localhost` alla porta `8080`
+-servire almeno 3 pagine HTML statiche
+-gestire le richieste GET e rispondere con codice 200
+-implementare risposta 404 per file inesistenti
 
 ## 2. Descrizione del Web Server
 
