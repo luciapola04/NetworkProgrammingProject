@@ -1,0 +1,9 @@
+# Ignora file e cartelle di sistema/macOS
+.DS_Store
+
+# Ignora la cartella di configurazione di IntelliJ IDEA
+.idea/
+
+# Ignora file di progetto IntelliJ IDEA
+*.iml
+
