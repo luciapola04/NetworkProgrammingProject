@@ -3,7 +3,7 @@ import os
 import mimetypes
 from datetime import datetime
 
-HOST = '127.0.0.1'  # Server IP address (localhost)
+HOST = 'localhost'  # Server IP address (localhost)
 PORT = 8080         # Server port number
 WWW_ROOT = 'www'    # Directory where web files are stored
 
