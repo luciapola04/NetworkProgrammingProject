@@ -54,5 +54,5 @@ Per avviare il server:
 3. Aprire un browser e navigare all'indirizzo: http://localhost:8080/
 4. Navigare il sito e utilizzare le pagine e il quiz.
 
-**Creato da Pola Lucia, 2025**
+**Creato da Pola Lucia per il corso 'Programmazione di Reti', Ingegneria e Scienze Informatiche A.A 2024/2025**
 
